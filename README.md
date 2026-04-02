@@ -1,10 +1,10 @@
-# 💎 FinanceFlow | Elite Tracking System
+#  FinanceFlow | Elite Tracking System
 
 A production-grade, full-stack financial dashboard designed to demonstrate professional engineering standards in **Python**, **FastAPI**, **CORS**, **JWT Security**, and **Clean Architecture**.
 
 ---
 
-## 🏗️ Project Architecture & Design
+##  Project Architecture & Design
 
 The system follows a rigorous **Separation of Concerns** (SoC) model to ensure high maintainability and testability:
 
@@ -18,7 +18,7 @@ The system follows a rigorous **Separation of Concerns** (SoC) model to ensure h
 
 ---
 
-## 🌟 Premium Capabilities
+##  Premium Capabilities
 
 ### 1. Robust RBAC (Role-Based Access Control)
 The system enforces strict permission boundaries at the **API layer**:
@@ -38,7 +38,7 @@ The system enforces strict permission boundaries at the **API layer**:
 
 ---
 
-## 🛠️ Local Installation & Launch
+##  Local Installation & Launch
 
 ### Prerequisites
 - Python 3.10+
@@ -66,4 +66,3 @@ uvicorn main:app --reload
 ---
 
 ---
-*Developed as a gold-standard technical submission for backend Python engineering roles.*
