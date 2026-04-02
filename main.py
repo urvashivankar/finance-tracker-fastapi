@@ -1,15 +1,27 @@
+import logging
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from database import engine, Base
 from routes import user_routes, transaction_routes, summary_routes
 
-# Initialize DB tables
-Base.metadata.create_all(bind=engine)
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# Initialize DB tables with error handling
+try:
+    logger.info("Initializing database tables...")
+    Base.metadata.create_all(bind=engine)
+    logger.info("Database initialized successfully.")
+except Exception as e:
+    logger.error(f"FATAL: Database initialization failed: {e}")
+    # Don't raise here, allow the app to attempt to start so we can see error logs
+    pass
 
 app = FastAPI(
     title="Finance Tracking System",
     description="A robust backend API for tracking income, expenses, and managing role-based financial summaries.",
-    version="1.0.0"
+    version="1.1.0"
 )
 
 # CORS configuration
